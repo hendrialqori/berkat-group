@@ -6,14 +6,12 @@ export default function ClockIn() {
             <header className="flex justify-center items-center">
                 <img src="/berkat-group-icon.png" className="" width={150} />
             </header>
-            <section className="flex flex-col justify-center items-center">
+            <section className="flex flex-col justify-center items-center w-full">
                 <div className="text-center">
                     <h1 className="text-sm font-semibold -tracking-wide">Absen masuk</h1>
                     <p className="text-xs font-medium text-gray-500">Silahkan lengkapi data dibawah</p>
-
-                    <Form />
                 </div>
-
+                <Form />
             </section>
             <footer>
                 <p className="text-[0.6rem] font-medium text-gray-400">2024 @ BERKAT GROUP</p>

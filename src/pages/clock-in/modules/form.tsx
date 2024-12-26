@@ -85,7 +85,7 @@ export default function Form() {
 
     return (
         <React.Fragment>
-            <div className="py-6 font-medium space-y-3">
+            <div className="py-6 font-medium space-y-3 w-full">
                 <div className="space-y-2 text-left">
                     <label className="text-[0.7rem] text-gray-600">Lacak lokasi</label>
                     <div className="relative size-auto">
