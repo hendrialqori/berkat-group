@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
 import dayjs from "dayjs"
-import Textarea from "#/components/ui/textarea";
 
 import L from "leaflet"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
@@ -19,14 +18,13 @@ const schema = z.object({
     clock_in: z.string().min(1, { message: "Jam masuk diperlukan" }),
     photo: z.any()
         .refine((file: File) => file.name, "Required")
-        .transform((file: File) => file).optional(),
-    address: z.string().min(1, { message: "Alamat diperlukan" })
+        .transform((file: File) => file).optional()
 })
 
 type Form = z.infer<typeof schema>
 
 export default function Form() {
-    const { register, handleSubmit: submit, formState: { errors }, setValue, watch } = useForm<Form>({
+    const { handleSubmit: submit, setValue, watch } = useForm<Form>({
         resolver: zodResolver(schema)
     })
 
@@ -119,11 +117,6 @@ export default function Form() {
                     <button className=" text-xs bg-black text-white rounded-md h-8 px-3 w-full" onClick={handleOpenCamera} type="button">
                         {photo ? "Lihat foto" : "Ambil foto"}
                     </button>
-                </div>
-                <div className="space-y-1 text-left">
-                    <label htmlFor="address" className="text-[0.7rem] text-gray-600">Alamat</label>
-                    <Textarea id="address" placeholder="Masukan alamat" rows={5} {...register("address")} />
-                    {errors.address && <span className="text-red-500 text-xs font-medium">{errors.address.message}</span>}
                 </div>
                 <button className="text-center text-xs bg-red-500 text-white rounded-md h-10 w-full" onClick={handleSubmit} type="submit">
                     Absen keluar
