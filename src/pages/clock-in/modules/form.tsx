@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod"
 import dayjs from "dayjs"
-import Input from "#/components/ui/input";
 import Textarea from "#/components/ui/textarea";
 
 import L from "leaflet"
@@ -15,7 +14,6 @@ import { MdOutlinePhotoCameraFront } from "react-icons/md";
 import Camera from "./camera";
 
 const schema = z.object({
-    identity_number: z.string().min(1, { message: "Nomor identitas diperlukan" }),
     longitude: z.number().nonnegative(),
     latitude: z.number().nonnegative(),
     clock_in: z.string().min(1, { message: "Jam masuk diperlukan" }),
@@ -88,18 +86,8 @@ export default function Form() {
     return (
         <React.Fragment>
             <div className="py-6 font-medium space-y-3">
-                <div className="space-y-1 text-left">
-                    <label htmlFor="identity_number" className="text-[0.7rem] text-gray-600">Nomor identitas (KTP)</label>
-                    <Input
-                        id="identity_number"
-                        placeholder="Masukan no. ktp anda"
-                        {...register("identity_number")}
-                        type="number"
-                    />
-                    {errors.identity_number && <span className="text-red-500 text-xs font-medium">{errors.identity_number.message}</span>}
-                </div>
                 <div className="space-y-2 text-left">
-                    <label className="text-[0.7rem] text-gray-600">Track lokasi</label>
+                    <label className="text-[0.7rem] text-gray-600">Lacak lokasi</label>
                     <div className="relative size-auto">
                         <MapContainer ref={mapRef} center={coordinate} zoom={4} scrollWheelZoom={false}>
                             <TileLayer
