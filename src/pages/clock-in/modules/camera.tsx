@@ -106,8 +106,8 @@ export default function Camera(props: Props) {
                             <button
                                 className="bg-white rounded-full size-10 grid place-items-center disabled:bg-white/20"
                                 onClick={handleTorch}
-                                disabled={!cameraRef.current?.torchSupported ? true : false}
-                                aria-disabled={!cameraRef.current?.torchSupported ? true : false}
+                                // disabled={!cameraRef.current?.torchSupported ? true : false}
+                                // aria-disabled={!cameraRef.current?.torchSupported ? true : false}
                             >
                                 <LuFlashlight className="text-xl" />
                             </button>
