@@ -137,8 +137,8 @@ export default function Form() {
                     <Textarea id="address" placeholder="Masukan alamat" rows={5} {...register("address")} />
                     {errors.address && <span className="text-red-500 text-xs font-medium">{errors.address.message}</span>}
                 </div>
-                <button className="text-center text-xs bg-green-500 text-white rounded-md h-10 w-full" onClick={handleSubmit} type="submit">
-                    Absen masuk
+                <button className="text-center text-xs bg-red-500 text-white rounded-md h-10 w-full" onClick={handleSubmit} type="submit">
+                    Absen keluar
                 </button>
             </div>
             <Camera
