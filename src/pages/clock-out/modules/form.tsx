@@ -77,7 +77,7 @@ export default function Form() {
     const handleSubmit = submit(() => { })
 
     const icon = L.icon({
-        iconUrl: "marker-icon.png",
+        iconUrl: "/marker-icon.png",
         iconAnchor: [12, 39],
         popupAnchor: [0, -30],
         iconSize: [25, 40],
