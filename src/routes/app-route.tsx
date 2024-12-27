@@ -11,6 +11,13 @@ export default function AppRoute() {
                     <Route path="clock-out" element={<Page.ClockOut />} />
                     <Route path="clock-in" element={<Page.ClockIn />} />
                 </Route>
+                <Route path="/payrol">
+                    <Route index element={<Page.Payrol.Home />} />
+                </Route>
+
+                {/* Master data */}
+                <Route path="/salary" element={<Page.MasterData.Salary />} />
+                {/* End master data */}
             </Routes>
         </BrowserRouter>
     )

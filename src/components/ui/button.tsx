@@ -6,8 +6,8 @@ type Props = React.ComponentPropsWithoutRef<"button"> & { asChild?: boolean }
 
 const Button = ({ className, asChild = false, children, ...rest }: Props) => {
     const classNames = twMerge(
-        "w-max bg-black text-white rounded-lg h-10 px-5 text-xs md:text-sm",
-        "hover:outline hover:outline-black",
+        "w-max bg-primary text-white rounded-lg h-10 px-5 text-xs md:text-sm",
+        "hover:outline hover:outline-primary",
         className
     )
 

@@ -26,9 +26,11 @@
     "react-leaflet": "5.0.0-rc.2",
     "react-pannellum": "^0.2.16",
     "react-router": "^7.1.0",
+    "recharts": "^2.15.0",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
-    "zod": "^3.24.1"
+    "zod": "^3.24.1",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
