@@ -12,7 +12,10 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/50" />
             <section className="w-full md:w-6/12 bg-yellow-500/30 grid place-items-center md:rounded-r-3xl overflow-hidden relative py-5 md:py-0">
                 <img src="/logo.png" alt="logo" />
-                <p className="text-white text-base md:text-xl font-bold">PT Junadev Technology</p>
+                <div className="text-white">
+                    <span className="text-[0.65rem] md:text-xs font-light">Created by</span>
+                    <p className="text-white text-base md:text-xl font-bold">PT Junadev Technology</p>
+                </div>
             </section>
             <section
                 className="w-full px-10 md:w-6/12 flex flex-col justify-center items-center gap-5 md:gap-4 relative"
@@ -57,7 +60,7 @@ export default function Home() {
                             <TbReportMoney className="text-3xl shrink-0 text-green-300" />
                             <div className="space-y-1">
                                 <h2 className="text-sm md:text-xl font-bold">GAJIAN</h2>
-                                <p className="text-[0.65rem] md:text-xs font-light"> kelola gaji karyawan dengan mudah, lengkap</p>
+                                <p className="text-[0.65rem] md:text-xs font-light">Kelola gaji karyawan dengan mudah, lengkap</p>
                             </div>
                         </div>
                     </div>
@@ -69,7 +72,7 @@ export default function Home() {
                             <HiOutlineOfficeBuilding className="text-3xl shrink-0 text-blue-300" />
                             <div className="space-y-1">
                                 <h2 className="text-sm md:text-xl font-bold">OFFICE</h2>
-                                <p className="text-[0.65rem] md:text-xs font-light">kelola data penting seperti inventaris kantor, daftar karyawan, dan dokumen lainnya.</p>
+                                <p className="text-[0.65rem] md:text-xs font-light">Kelola data penting seperti inventaris kantor, daftar karyawan, dan dokumen lainnya.</p>
                             </div>
                         </div>
                     </div>
