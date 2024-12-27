@@ -59,7 +59,7 @@ export default function Home() {
                         <div className="relative text-white z-2 flex gap-3 w-full px-4 md:px-10">
                             <TbReportMoney className="text-3xl shrink-0 text-green-300" />
                             <div className="space-y-1">
-                                <h2 className="text-sm md:text-xl font-bold">GAJIAN</h2>
+                                <h2 className="text-sm md:text-xl font-bold">HRD ( Payroll )</h2>
                                 <p className="text-[0.65rem] md:text-xs font-light">Kelola gaji karyawan dengan mudah, lengkap</p>
                             </div>
                         </div>
