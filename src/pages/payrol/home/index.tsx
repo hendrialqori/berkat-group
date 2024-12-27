@@ -10,7 +10,7 @@ import BarChart from "./modules/bar-chart";
 
 export default function Home() {
     return (
-        <AdminLayout className="space-y-5">
+        <AdminLayout className="space-y-5 md:space-y-10">
             <div className="flex flex-col md:flex-row items-start gap-5 xl:items-center justify-between">
                 <div>
                     <h2 className="text-base xl:text-xl font-semibold -tracking-wide">Welcome back, Admin</h2>

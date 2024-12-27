@@ -4,7 +4,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 export default function Tabs() {
     return (
         <div className="space-y-4">
-            <p className="text-sm font-medium">Silahkan pilih divisi yang akan ditampikan</p>
+            <p className="text-xs md:text-sm font-medium">Silahkan pilih divisi yang akan ditampikan</p>
             <div className="flex items-center flex-wrap gap-4">
                 <Tab
                     name="CV Berkat Makmur Sejahtera"
@@ -43,11 +43,11 @@ export const Tab = ({ name, slug }: { name: string; slug: string }) => {
 
     return (
         <button
-            className={`rounded-md border border-gray-200 px-4 py-1.5 flex items-center gap-2 w-full md:w-max ${active ? "text-white bg-primary" : "text-gray-500 hover:bg-gray-200"}`}
+            className={`rounded-md border border-gray-200 px-4 py-2 md:py-1.5 flex items-center gap-2 w-full md:w-max ${active ? "text-white bg-primary" : "text-gray-500 hover:bg-gray-200"}`}
             onClick={handleClickTab}
         >
             {active && <IoIosCheckmarkCircle className="flex-shrink-0 size-4 text-green-500" />}
-            <span className="text-sm">{name}</span>
+            <span className="text-xs md:text-sm">{name}</span>
         </button>
     )
 }
