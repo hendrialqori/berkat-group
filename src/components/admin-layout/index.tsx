@@ -11,7 +11,7 @@ export default function AdminLayout({ className, children, }: Props) {
         <main className="flex font-inter">
             <Sidebar />
             <section className={twMerge(
-                "bg-gray-50 px-4 w-full md:w-10/12 max-w-[1800px] mx-auto",
+                "bg-gray-50 px-4 pb-10 w-full md:w-10/12 max-w-[1800px] mx-auto",
                 className
             )}
             >
