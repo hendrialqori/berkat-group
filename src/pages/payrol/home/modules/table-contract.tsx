@@ -1,12 +1,24 @@
-const table_head = ["Nama Pegawai", "Departement", "Tanggal Berakhir"]
-const table_data = ["Hendri Alqori", "Farmasi", "23 Juni 2024"]
-
-
 import { HiDotsVertical } from "react-icons/hi";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 import { LuRefreshCcw } from "react-icons/lu";
 import * as Popover from "@radix-ui/react-popover";
+
+const table_head = ["Nama Pegawai", "Departement", "Tanggal Berakhir"]
+
+type Employee = {
+    nama_pegawai: string;
+    department: string;
+    brakhir: string; // You can use `Date` instead of `string` if you want to handle dates directly
+};
+
+const employees: Employee[] = [
+    { nama_pegawai: "ABDUL WAHAB", department: "BAGIAN GUDANG", brakhir: "2024-12-31" },
+    { nama_pegawai: "ADETYA", department: "OPERASIONAL", brakhir: "2024-12-31" },
+    { nama_pegawai: "ALTHA DWIPA RAMADONA", department: "OPERASIONAL", brakhir: "2024-12-31" },
+    { nama_pegawai: "CASUARINA EQUISTIFOLIA", department: "OPERASIONAL", brakhir: "2024-12-31" },
+    { nama_pegawai: "ERVINIWA", department: "BAGIAN PENJUALAN", brakhir: "2024-12-31" },
+];
 
 
 export default function TableContract() {
@@ -49,21 +61,13 @@ export default function TableContract() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        {table_data.map((data, i) => (
-                            <td key={i} className="text-xs md:text-sm -tracking-wide text-nowrap py-4 pl-5 border-b border-gray-200">{data}</td>
-                        ))}
-                    </tr>
-                    <tr>
-                        {table_data.map((data, i) => (
-                            <td key={i} className="text-xs md:text-sm -tracking-wide text-nowrap py-4 pl-5 border-b border-gray-200">{data}</td>
-                        ))}
-                    </tr>
-                    <tr>
-                        {table_data.map((data, i) => (
-                            <td key={i} className="text-xs md:text-sm -tracking-wide text-nowrap py-4 pl-5 border-b border-gray-200">{data}</td>
-                        ))}
-                    </tr>
+                    {employees.map((emp, i) => (
+                        <tr key={i}>
+                            <td key={i} className="text-xs md:text-sm -tracking-wide text-nowrap py-4 pl-5 border-b border-gray-200">{emp.nama_pegawai}</td>
+                            <td key={i} className="text-xs md:text-sm -tracking-wide text-nowrap py-4 pl-5 border-b border-gray-200">{emp.department}</td>
+                            <td key={i} className="text-xs md:text-sm -tracking-wide text-nowrap py-4 pl-5 border-b border-gray-200">{emp.brakhir}</td>
+                        </tr>
+                    ))}
                 </tbody>
                 <tfoot></tfoot>
             </table>
