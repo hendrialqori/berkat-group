@@ -40,7 +40,7 @@ export default function Sidebar() {
             initial={{ x: 0 }}
             animate={{ x: sidebarStore.show ? 0 : "-100%" }}
             transition={{ bounce: false, duration: 0.5 }}
-            className="bg-white h-screen border-r border-[#F2F4F7] fixed lg:sticky z-[11] top-0 px-3 xl:px-5 py-3 w-60 shrink-0 space-y-5 overflow-y-scroll overflow-x-visible"
+            className="bg-white h-screen border-r border-[#F2F4F7] fixed lg:sticky z-[11] top-0 px-3 xl:px-5 pt-3 pb-10 w-60 shrink-0 space-y-5 overflow-y-scroll overflow-x-visible"
         >
             <div className="flex justify-between items-start">
                 <Link to={{ pathname: "/" }}>
