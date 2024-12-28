@@ -1,17 +1,20 @@
 import React from "react";
 import { Link, useHref } from "react-router";
 import { motion } from "framer-motion";
-import { TbContract, TbRibbonHealth, TbSmartHome } from "react-icons/tb";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineCoPresent } from "react-icons/md";
+import { TbAdjustments, TbContract, TbNumber21Small, TbRibbonHealth, TbSmartHome } from "react-icons/tb";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineCoPresent, MdOutlineDirectionsBusFilled, MdOutlineHolidayVillage, MdOutlineMoneyOffCsred, MdOutlinePayment, MdOutlinePayments } from "react-icons/md";
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { IoLink } from "react-icons/io5";
 import { TbBuildingBank } from "react-icons/tb";
 import { MdOutlineViewAgenda } from "react-icons/md";
 import { MdOutlinePerson4 } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import { GrUserWorker } from "react-icons/gr";
+import { GrMoney, GrUserWorker } from "react-icons/gr";
 import { PiPersonSimpleBike, PiStackOverflowLogoBold } from "react-icons/pi";
 import { useSidebarStore } from "#/stores/use-sidebar-store";
+import { LuHandHelping } from "react-icons/lu";
+import { FiUsers } from "react-icons/fi";
+import { HiOutlineCalendarDateRange } from "react-icons/hi2";
 
 export default function Sidebar() {
     const sidebarStore = useSidebarStore()
@@ -64,7 +67,7 @@ export default function Sidebar() {
                 <MenuItem
                     pathname="/user"
                     name="User"
-                    icon={<TbSmartHome className="size-5" />}
+                    icon={<FiUsers className="size-5" />}
                 />
                 <MenuItem
                     pathname="/area"
@@ -127,6 +130,114 @@ export default function Sidebar() {
                     pathname="/client-visit"
                     name="Kunjungan Client"
                     icon={<PiPersonSimpleBike className="size-5" />}
+                />
+            </Menu>
+            <Menu title="Penggajian">
+                <MenuItem
+                    pathname="/penyesuaian"
+                    name="Penyesuaian"
+                    icon={<TbAdjustments className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/pinjaman"
+                    name="Pinjaman"
+                    icon={<LuHandHelping className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/penggajian"
+                    name="Penggajian"
+                    icon={<MdOutlinePayments className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/belum-terbayar"
+                    name="Belum Terbayar"
+                    icon={<MdOutlineMoneyOffCsred className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/terbayar"
+                    name="Terbayar"
+                    icon={<MdOutlinePayment className="size-5" />}
+                />
+            </Menu>
+            <Menu title="Laporan">
+                <MenuItem
+                    pathname="/pegawai"
+                    name="Pegawai"
+                    icon={<MdOutlinePerson4 className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/absensi"
+                    name="Absensi"
+                    icon={<MdOutlineCoPresent className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/lembur"
+                    name="Lembur"
+                    icon={<PiStackOverflowLogoBold className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/pinjaman"
+                    name="Pinjaman"
+                    icon={<LuHandHelping className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/kontrak"
+                    name="Kontrak"
+                    icon={<TbContract className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/penggajian"
+                    name="Penggajian"
+                    icon={<MdOutlinePayments className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/pajak"
+                    name="Pajak PPH 21"
+                    icon={<TbNumber21Small className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/bpjs-kesehatan"
+                    name="BPJS Tenaga Kerja"
+                    icon={<GrUserWorker className="size-5" />}
+                />
+            </Menu>
+            <Menu title="Pengaturan">
+                <MenuItem
+                    pathname="/perusahaan"
+                    name="Perusahaan"
+                    icon={<HiOutlineOfficeBuilding className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/pajak-pph-21"
+                    name="Pajak PPH 21"
+                    icon={<TbNumber21Small className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/bpjs-tenaga-kerja"
+                    name="BPJS Tenaga Kerja"
+                    icon={<GrUserWorker className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/biaya-tambahan"
+                    name="Biaya Tambahan"
+                    icon={<GrMoney className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/hari-libur"
+                    name="Hari Libur"
+                    icon={<MdOutlineHolidayVillage className="size-5" />}
+                />
+            </Menu>
+            <Menu title="Lainnya">
+                <MenuItem
+                    pathname="/annual"
+                    name="Pengajuan Cuti Karyawan"
+                    icon={<HiOutlineCalendarDateRange className="size-5" />}
+                />
+                <MenuItem
+                    pathname="/visitor"
+                    name="Kunjungan Karyawan"
+                    icon={<MdOutlineDirectionsBusFilled className="size-5" />}
                 />
             </Menu>
         </motion.aside>
